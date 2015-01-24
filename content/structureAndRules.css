@@ -1,0 +1,126 @@
+@import "style.css"
+
+/********** Basic Syntax **********/
+
+/*
+Rules
+
+  Selectors: the element that is linked to a particular style. i.e. */
+
+  p {
+    text-indexnt: 3em;
+  }
+
+  /* Class Selectors */
+
+  code.html {
+    color: #191970
+  }
+
+  code.css {
+    color: #4b0082
+  }
+
+  /* In this case, the note class may be used with any element. */
+  .note {
+    font-size: small
+  }
+
+  /* ID Selectors: individually assigned per-element */
+
+  #myParagraph {
+    text-indent: 3em
+  }
+
+  /* --> <p id="myParagraph">Hello World!</p> */
+
+  /* Contextual Selectors: strings of two or more simple selectors separated by white space.
+    i.e. for the context of emphasized text in paragraph tags, have the background be yellow. */
+
+  p em {
+    background: yellow;
+  }
+
+/* 
+Declarations 
+
+  Properties: color, margin, and font.
+
+  Values: assignment that a property receives. 
+  i.e. the property color could receive the value red.
+
+  Grouping: i.e. all of the headings in a document could be given identical declarations through a grouping */
+
+  h1, h2, h3, h4, h5, h6 {
+    color: red;
+    font-family: sans-serif; 
+  }
+
+  /* Inheritance: all selectors nested within selectors will inherit the property values assigned to the outer selector unless otherwise modified. 
+  i.e. a color defined for the BODY will also be applied to text in a paragraph
+
+  Comments
+
+  COMMENTS CANNOT BE NESTED */
+
+/********** End Basic Syntax **********/
+
+/********** Pseudo-classes and Pseudo-elements **********/
+
+/* 
+  Pseudo-classes distinguish among different element types 
+  i.e. visited and active links 
+  selector:pseudo-class { property: value } */
+  a:link {
+    color: red;
+  }
+
+  a:active {
+    color: blue;
+    font-size: 125%;
+  }
+
+  a:visited {
+    color: green;
+    font-size: 85%; 
+  }
+
+/*
+  Pseudo-elements refer to sub-parts of elements
+  i.e. the first letter of a paragraph.
+  selector:pseudo-element { property: value } */
+  p:first-line {
+    font-variant: small-caps;
+    font-weight: bold
+  }
+
+  p:first-letter { 
+    font-size: 300%; 
+    float: left 
+  }
+
+/********** End Pseudo-classes and Pseudo-elements **********/
+
+/********** Cascading Order **********/
+
+  /*
+
+  1. Author's rule trumps Readers
+      a. both Author's and Reader's rules trump browser
+  2. !important trumps contradictory styles of equal weight. 
+  3. The more specific style will always win based on count. 
+      a. Count the number of ID attributes in the selector.
+      b. Count the number of CLASS attributes in the selector.
+      c. Count the number of HTML tag names in the selector.
+      d. Write the three numbers in exact order with no spaces or commas 
+        to obtain a three digit number. 
+
+      #id1         {xxx} /* a=1 b=0 c=0 --> specificity = 100 
+      ul ul li.red {xxx} /* a=0 b=1 c=3 --> specificity = 013 
+      li.red       {xxx} /* a=0 b=1 c=1 --> specificity = 011 
+      li           {xxx} /* a=0 b=0 c=1 --> specificity = 001 
+
+      Order of Specification
+      To make it easy, when two rules have the same weight, the last rule specified wins.
+
+/********** End Cascading Order **********/

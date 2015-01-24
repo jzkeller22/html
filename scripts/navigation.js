@@ -8,4 +8,5 @@ $(document).ready(function() {
 	$("nav").append("<a href='audiovideo.html'>Audio & Video</a> | ");
 	$("nav").append("<a href='funwithcss.html'>Fun with CSS</a> | ");
 	$("nav").append("<a href='geolocation.html'>Geolocation</a> | ");
+	$("nav").append("<a href='WebWorker.html'>Web Worker</a> | ");
 });
