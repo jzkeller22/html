@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript" ></script>
+<script src="scripts/navigation.js" type="text/javascript" ></script>
+<link rel="stylesheet" type="text/css" href="content/style.css"></link>
+<style></style>
+</head>
+
+<header>
+  <title>JavaScript</title>
+</header>
+
+<nav></nav>
+
+
+<body>
+
+  <p id="demo"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+
+  <script>
+  var cars = ["Saab", "Volvo", "BMW"];
+  //var cars = new Array("Saab", "Volvo", "BMW");
+  cars[2] = "Altima";
+  cars[cars.length] = "Lemon";
+  var i;
+  var mystring = "";
+  for (i = 0; i < cars.length; i++) {
+    mystring = mystring + cars[i] + ", ";
+  }
+  document.getElementById("demo").innerHTML = mystring;
+
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demo2").innerHTML = isArray(fruits);
+
+  function isArray(myArray) {
+    return myArray.constructor.toString().indexOf("Array") > -1;
+  }
+
+  //for in
+  // iterates through each property in object
+  var txt = "";
+  var person = {fname:"John", lname:"Doe", age:25};
+  var x;
+  for (x in person) {
+      txt += person[x] + " ";
+  }
+  document.getElementById("demo3").innerHTML = txt;
+
+  function getToday() {
+      var day;
+      switch (new Date().getDay()) {
+          case 0:
+              day = "Super Sunday";
+              break;
+          case 1:
+              day = "Manic Monday";
+              break;
+          case 2:
+              day = "Tubular Tuesday";
+              break;
+          case 3:
+              day = "Wacky Wednesday";
+              break;
+          case 4:
+              day = "Thrify Thursday";
+              break;
+          case 5:
+              day = "Fantastic Friday";
+              break;
+          case  6:
+              day = "Stat Saturday";
+              break;
+      }
+      return day;
+  }
+  document.getElementById("demo4").innerHTML = "Today is " + getToday();
+
+  //string.search(searchvalue)
+  function mySearch() {
+      var str = document.getElementById("blueText").innerHTML;
+      var n = str.search(/blue/i);
+      document.getElementById("demo5").innerHTML = n;
+  }
+  </script>
+
+  <p>
+    <ul>
+      <li>In JavaScript, arrays use numbered indexes. </li>
+        <li>In JavaScript, objects use named indexes.</li>
+        <li>null is an object. It's type is null. undefined is not an object, it's type is undefined. </li>
+        
+    </ul>
+  </p>
+
+  <p>
+      <div id="blueText">Mr. Blue has a blue house</div>
+      <button onclick="mySearch()">Index of blue (case insesative)</button>
+      <div id="demo5"></div>
+  </p>
+
+</body>
+
+<footer>
+  Justin Inc. 2015
+</footer>
+
+</html>
