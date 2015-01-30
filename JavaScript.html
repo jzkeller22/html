@@ -136,6 +136,87 @@
       + ". My mother " + myMother.name() + " is " + myMother.nationality;
   </script>
 
+  <p>Click the button to display the time. This is my onclick event.</p>
+
+  <button id="btnDate" onclick="getElementById('demo7').innerHTML=Date()">What is the time?</button>
+
+  <p id="demo7"></p>
+
+  <p>Click the button to find out if the onclick event is a bubbling event.</p>
+
+  <button onclick="myFunction(event)">Try it</button>
+
+  <p id="demo8"></p>
+
+  <script>
+  function myFunction(event) {
+      var x = event.bubbles;
+      document.getElementById("demo8").innerHTML = x;
+  }
+
+  document.getElementById("btnDate").addEventListener('click',function () {
+      this.style.backgroundColor = '#cc0000'
+  },false)
+  </script>
+
+  <p>When you enter the input field, a function is triggered which sets the background color to yellow. When you leave the input field, a function is triggered which sets the background color to red.</p>
+
+  Enter your name: <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+
+  <script>
+  function focusFunction() {
+      // Focus = Changes the background color of input to yellow
+      document.getElementById("myInput").style.background = "yellow";
+  }
+
+  function blurFunction() {
+      // No focus = Changes the background color of input to red
+      document.getElementById("myInput").style.background = "red";
+  }
+  </script>
+
+  <p>
+      Depending on browser support:<br>
+      A color picker can pop-up when you enter the input field.
+  </p>
+
+  <form action="action_page.php">
+      Select your favorite color:
+      <input type="color" name="favcolor" value="#ff0000">
+      <input type="submit">
+  </form>
+
+  <p><b>Note:</b> type="color" is not supported in Internet Explorer.</p>
+
+
+  <p>
+      Depending on browser support:<br>
+      Numeric restrictions will apply in the input field.
+  </p>
+
+  <form action="action_page.php">
+      Quantity (between 1 and 5):
+      <input type="number" name="quantity" min="1" max="5">
+      <input type="submit">
+  </form>
+
+  <p><b>Note:</b> type="number" is not supported in IE9 and earlier.</p>
+
+  <p>
+      Depending on browser support:<br>
+      A date picker can pop-up when you enter the input field.
+  </p>
+
+  <form action="action_page.php">
+      Birthday (date and time):
+      <input type="datetime-local" name="bdaytime">
+      <input type="submit" value="Send">
+  </form>
+
+  <p><b>Note:</b>
+      type="datetime-local" is not supported in Firefox and Internet Explorer.
+  </p>
+
 </body>
 
 <footer>
