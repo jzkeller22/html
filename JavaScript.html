@@ -92,7 +92,7 @@
       <li>In JavaScript, arrays use numbered indexes. </li>
         <li>In JavaScript, objects use named indexes.</li>
         <li>null is an object. It's type is null. undefined is not an object, it's type is undefined. </li>
-        
+
     </ul>
   </p>
 
@@ -101,6 +101,40 @@
       <button onclick="mySearch()">Index of blue (case insesative)</button>
       <div id="demo5"></div>
   </p>
+
+  <br>
+  <p id="demo6"></p>
+  <script>
+      function person(first, last, age, eye) {
+          this.firstName = first;
+          this.lastName = last;
+          this.age = age;
+          this.eyeColor = eye;
+      }
+
+      var myFather = new person("Zach", "Keller", 54, "brown");
+      var myMother = new person("Diane", "Keller", 54, "brown");
+
+      // declare a function on the object (each obj individually)
+      //myFather.name = function() {
+      //  return this.firstName + " " + this.lastName;
+      //};
+      //myMother.name = function() {
+      //  return this.firstName + " " + this.lastName;
+      //};
+
+      // add a prototype function
+      person.prototype.name = function() {
+          return this.firstName + " " + this.lastName;
+      };
+
+      // add a prototype outside constructor
+      person.prototype.nationality = "American";
+
+      document.getElementById("demo6").innerHTML =
+      "My father " + myFather.name() + " is " + myFather.nationality
+      + ". My mother " + myMother.name() + " is " + myMother.nationality;
+  </script>
 
 </body>
 
