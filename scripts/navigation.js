@@ -10,5 +10,7 @@ $(document).ready(function() {
 	$("nav").append("<a href='geolocation.html'>Geolocation</a> | ");
 	$("nav").append("<a href='WebWorker.html'>Web Worker</a> | ");
 	$("nav").append("<a href='JavaScript.html'>JavaScript</a> | ");
+	$("nav").append("<a href='WebStorage.html'>Web Storage</a> | ");
+	$("nav").append("<a href='WebSocket.html'>Web Socket</a> | ");
 	$("nav").append("<a href='About.html'>About</a> | ");
 });
