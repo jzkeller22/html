@@ -79,6 +79,16 @@ li {
 	display: inline;
 }
 
+img {
+	opacity: 0.4;
+	filter: alpha(opacity=40); 
+}
+
+img:hover {
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+
 </style>
 
 </head>
@@ -90,6 +100,13 @@ li {
 <nav></nav>
 
 <body>
+
+	<h1>CSS font-family</h1>
+	<p class="serif">This is a paragraph, shown in the Times New Roman font.</p>
+	<p class="sansserif">This is a paragraph, shown in the Arial font.</p>
+
+<h2>Box Model</h2>
+<img src="boxmodel.png" alt="Box Model"></img>
 
 <h1>CSS Display and Visibility</h1>
 <div style="width:394px;height:160px;margin-left:auto;margin-right:auto;text-align:left;border:1px solid gray;">
