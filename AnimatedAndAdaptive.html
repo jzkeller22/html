@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript" ></script>
+    <script src="scripts/navigation.js" type="text/javascript" ></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <style>
+
+        .animate {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            transition: width 2s ease 0s, height 2s, font-size 2s, transform 2s;
+        }
+
+        .animate:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
+            font-size: 40px;
+        }
+
+        .animate > img {
+            height: 50px;
+            width: 50px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        #div2 {
+            transform: scale(.5, .5)
+        }
+
+        .newspaper {
+            -webkit-column-count: 3; /* Chrome, Safari, Opera */
+            -moz-column-count: 3; /* Firefox */
+            column-count: 3;
+            -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+            -moz-column-gap: 40px; /* Firefox */
+            column-gap: 40px;
+            -webkit-column-rule: 4px outset lightgrey; /* Chrome, Safari, Opera */
+            -moz-column-rule: 4px outset lightgrey; /* Firefox */
+            column-rule: 4px outset lightgrey;
+        }
+
+        /******************** MOBILE STYLES **************************/
+        @media screen and (max-width: 767px) {
+            footer {
+                background-color: yellow;
+            }
+
+            .newspaper {
+                -webkit-column-count: 1; /* Chrome, Safari, Opera */
+                -moz-column-count: 1; /* Firefox */
+                column-count: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<header>
+    <title>Animated and Adaptive UI</title>
+</header>
+
+<nav></nav>
+
+<body>
+    <h1>Animated and Adaptive UI</h1>
+
+    <div class="animate">
+        <img src="images/black_white_furby_whit_brown_eyes.jpg" />
+    </div>
+
+    <div class="animate" id="div2">
+        so small
+    </div>
+
+    <p>
+        <a href="TutsFlipper.html">Rotate Example</a>
+    </p>
+
+    <div class="newspaper">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+    </div>
+
+    <br>
+</body>
+
+<footer>
+    Justin Inc. 2015
+</footer>
+
+</html>

@@ -15,5 +15,6 @@ $(document).ready(function() {
 	$("nav").append("<a href='BorderImage.html'>Border Image</a> | ");
 	$("nav").append("<a href='TutsFlipper.html'>Tuts Flipper</a> | ");
 	$("nav").append("<a href='CSSSelectors.html'>CSS Selectors</a> | ");
+	$("nav").append("<a href='AnimatedAndAdaptive.html'>Animated and Adaptive UI</a> | ");
 	$("nav").append("<a href='About.html'>About</a> | ");
 });
