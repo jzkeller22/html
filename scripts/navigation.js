@@ -1,6 +1,12 @@
 // Menu Navigation
 
 $(document).ready(function() {
+
+	window.applicationCache.addEventListener('updateready', onUpdateReady);
+	if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+		onUpdateReady();
+	}
+
 	$("nav").append("<a href='index.html'>Home</a> | ");
 	$("nav").append("<a href='dom.html'>DOM</a> | ");
 	$("nav").append("<a href='canvas.html'>Canvas</a> | ");
@@ -18,3 +24,7 @@ $(document).ready(function() {
 	$("nav").append("<a href='AnimatedAndAdaptive.html'>Animated and Adaptive UI</a> | ");
 	$("nav").append("<a href='About.html'>About</a> | ");
 });
+
+function onUpdateReady() {
+	alert('found new version!');
+}
