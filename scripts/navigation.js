@@ -23,6 +23,7 @@ $(document).ready(function() {
 	$("nav").append("<a href='CSSSelectors.html'>CSS Selectors</a> | ");
 	$("nav").append("<a href='AnimatedAndAdaptive.html'>Animated and Adaptive UI</a> | ");
 	$("nav").append("<a href='XmlHttpRequest.html'>XmlHttpRequest</a> | ");
+	$("nav").append("<a href='Serialize.html'>Serialize</a> | ");
 	$("nav").append("<a href='About.html'>About</a> | ");
 });
 
