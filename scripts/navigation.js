@@ -2,10 +2,10 @@
 
 $(document).ready(function() {
 
-	window.applicationCache.addEventListener('updateready', onUpdateReady);
-	if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
-		onUpdateReady();
-	}
+	//window.applicationCache.addEventListener('updateready', onUpdateReady);
+	//if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+	//	onUpdateReady();
+	//}
 
 	$("nav").append("<a href='index.html'>Home</a> | ");
 	$("nav").append("<a href='dom.html'>DOM</a> | ");
@@ -22,6 +22,7 @@ $(document).ready(function() {
 	$("nav").append("<a href='TutsFlipper.html'>Tuts Flipper</a> | ");
 	$("nav").append("<a href='CSSSelectors.html'>CSS Selectors</a> | ");
 	$("nav").append("<a href='AnimatedAndAdaptive.html'>Animated and Adaptive UI</a> | ");
+	$("nav").append("<a href='XmlHttpRequest.html'>XmlHttpRequest</a> | ");
 	$("nav").append("<a href='About.html'>About</a> | ");
 });
 
